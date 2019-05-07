@@ -2,6 +2,7 @@
 .byebug_history
 *.gem
 Gemfile.lock
+coverage
 log/*.log
 pkg/
 spec/examples.txt

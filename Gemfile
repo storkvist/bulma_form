@@ -22,6 +22,7 @@ end
 
 group :test do
   gem 'equivalent-xml'
+  gem 'simplecov', require: false
   gem 'sqlite3'
 end
 
