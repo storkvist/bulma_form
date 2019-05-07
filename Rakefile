@@ -16,12 +16,11 @@ end
 
 require 'bundler/gem_tasks'
 
-require 'rake/testtask'
-
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = false
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run specs'
 end
 
-task default: :test
+task default: :spec

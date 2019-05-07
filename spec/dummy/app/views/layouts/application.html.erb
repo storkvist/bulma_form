@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>bulma_form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.33.0/codemirror.min.css">
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.33.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.33.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.33.0/mode/xml/xml.min.js"></script>
+
+    <script type="text/javascript">
+      var togglers = document.querySelectorAll('button.toggle');
+      for (var i = 0; i < togglers.length; i++) {
+        togglers[i].addEventListener('click', function() {
+          this.parentElement.querySelector('.code').classList.remove('is-sr-only');
+          CodeMirror.fromTextArea(this.parentElement.querySelector('.codemirror'), {
+            mode: 'htmlmixed',
+            tabSize: 2,
+            lineNumbers: true
+          });
+          this.remove();
+        });
+      }
+    </script>
+  </body>
+</html>

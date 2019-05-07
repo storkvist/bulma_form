@@ -1,0 +1,23 @@
+require: rubocop-performance
+
+AllCops:
+  Exclude:
+    - spec/dummy/db/schema.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - demo/test/**/*
+    - test/**/*
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    - spec/dummy/db/migrate/*
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
