@@ -1,5 +1,7 @@
 language: ruby
 rvm:
+  - 2.2.2
   - 2.5.0
 script:
+  - cd spec/dummy && ./bin/rails db:prepare
   - bundle exec rake spec

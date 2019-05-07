@@ -1,5 +1,7 @@
 begin
   require 'bundler/setup'
+  require 'rspec/core/rake_task'
+  require 'rubocop/rake_task'
 rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
@@ -16,11 +18,8 @@ end
 
 require 'bundler/gem_tasks'
 
-begin
-  require 'rspec/core/rake_task'
-  RSpec::Core::RakeTask.new(:spec)
-rescue LoadError
-  puts 'You must `gem install bundler` and `bundle install` to run specs'
-end
+RuboCop::RakeTask.new(:rubocop)
 
-task default: :spec
+RSpec::Core::RakeTask.new(:spec)
+
+task default: %i[spec rubocop]
