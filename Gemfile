@@ -13,11 +13,12 @@ gemspec
 gem 'rails', '~> 6.0.0.rc1'
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'htmlbeautifier'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'sass-rails'
-  gem 'web-console'
 end
 
 group :test do

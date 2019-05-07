@@ -4,9 +4,9 @@
 
 `bulma_form` is a Rails form builder that helps create Bulma-styled forms in your Rails application. It provides form helpers that extend existing Rails form helpers adding necessary fields, labels and additional markup recommended by Bulma reference guide.
 
-## Usage
+<!-- ## Usage
 
-How to use my plugin.
+How to use my plugin. -->
 
 ## Installation
 

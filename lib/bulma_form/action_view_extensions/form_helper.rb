@@ -11,7 +11,19 @@ module BulmaForm
       def bulma_form_with(options = {}, &block)
         options.reverse_merge!(builder: BulmaForm::FormBuilder)
 
-        form_with(options, &block)
+        with_bulma_form_field_error_proc do
+          form_with(options, &block)
+        end
+      end
+
+      private
+
+      def with_bulma_form_field_error_proc
+        original_proc = ActionView::Base.field_error_proc
+        ActionView::Base.field_error_proc = BulmaForm.field_error_proc
+        yield
+      ensure
+        ActionView::Base.field_error_proc = original_proc
       end
     end
   end
