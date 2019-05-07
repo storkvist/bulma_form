@@ -1,5 +1,9 @@
 [![Build Status](https://travis-ci.org/storkvist/bulma_form.svg?branch=master)](https://travis-ci.org/storkvist/bulma_form)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0c49c4dd9f18ec44021e/test_coverage)](https://codeclimate.com/github/storkvist/bulma_form/test_coverage)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/0c49c4dd9f18ec44021e/maintainability)](https://codeclimate.com/github/storkvist/bulma_form/maintainability)
+
 # BulmaForm
 
 Short description and motivation.
