@@ -19,6 +19,8 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'sass-rails'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
