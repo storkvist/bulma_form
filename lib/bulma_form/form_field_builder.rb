@@ -4,7 +4,7 @@ module BulmaForm
 
     private
 
-    def form_field_builder(method, options)
+    def form_field_builder(method, options, _html_options = nil)
       form_field(method, options) { yield }
     end
   end

@@ -5,6 +5,7 @@
     <%= form.text_field :name, placeholder: 'Text input', help: 'Enter your name' %>
     <%= form.email_field :email, placeholder: 'Email input' %>
     <%= form.password_field :password %>
+    <%= form.select :status, [['activated', 1], ['blocked', 2]], prompt: 'Please Select' %>
   <% end %>
 <% end %>
 
@@ -17,7 +18,6 @@
     <%= bulma_form_with model: @user, layout: :horizontal, local: true do |form| %>
       <%#= form.email_field :email, placeholder: "Enter Email", label: "Email address", help: "We'll never share your email with anyone else" %>
       <%#= form.password_field :password, placeholder: "Password" %>
-      <%#= form.select :status, [['activated', 1], ['blocked', 2]], prompt: "Please Select" %>
       <%#= form.text_area :misc %>
       <%#= form.check_box :terms, label: "Agree to Terms" %>
       <%#= form.collection_check_boxes :misc, @collection, :id, :street %>
