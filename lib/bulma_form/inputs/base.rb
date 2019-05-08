@@ -9,7 +9,10 @@ module BulmaForm
         def bulma_field(field_name)
           define_method "#{field_name}_with_bulma" do |name, options = {}|
             form_field_builder(name, options) do
-              options[:class] = [options[:class], 'input'].compact.join(' ') if INPUT_ELEMENTS.include?(field_name)
+              classes = [options[:class]]
+              classes <<= 'input' if INPUT_ELEMENTS.include?(field_name)
+              classes <<= 'is-danger' if error?(name)
+              options[:class] = classes.compact.join(' ')
 
               send("#{field_name}_without_bulma".to_sym, name, options)
             end

@@ -20,8 +20,8 @@ module BulmaHelper
   end
 
   def toggle
-    content_tag(:button, class: 'toggle btn btn-sm btn-info') do
-      'Show Source Code'
+    content_tag(:button, class: 'toggle button is-small is-text') do
+      'Show source code'
     end
   end
 end
