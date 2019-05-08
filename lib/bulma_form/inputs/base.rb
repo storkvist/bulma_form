@@ -3,7 +3,7 @@ module BulmaForm
     module Base
       extend ActiveSupport::Concern
 
-      INPUT_ELEMENTS = %i[email_field text_field].freeze
+      INPUT_ELEMENTS = %i[email_field password_field text_field].freeze
 
       class_methods do
         def bulma_field(field_name)

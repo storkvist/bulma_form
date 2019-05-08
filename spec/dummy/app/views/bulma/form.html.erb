@@ -4,6 +4,7 @@
   <%= bulma_form_with model: @user, local: true do |form| %>
     <%= form.text_field :name, placeholder: 'Text input', help: 'Enter your name' %>
     <%= form.email_field :email, placeholder: 'Email input' %>
+    <%= form.password_field :password %>
   <% end %>
 <% end %>
 

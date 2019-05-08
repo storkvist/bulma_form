@@ -8,6 +8,7 @@ module BulmaForm
 
     include BulmaForm::Inputs::Base
     include BulmaForm::Inputs::EmailField
+    include BulmaForm::Inputs::PasswordField
     include BulmaForm::Inputs::TextField
 
     delegate :content_tag, :capture, :concat, to: :@template
