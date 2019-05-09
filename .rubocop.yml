@@ -9,6 +9,10 @@ Metrics/AbcSize:
     - demo/test/**/*
     - test/**/*
 
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
 Metrics/LineLength:
   Max: 120
 
