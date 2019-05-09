@@ -2,6 +2,7 @@
 
 <%= form_with_source do %>
   <%= bulma_form_with model: @user, local: true do |form| %>
+    <%= form.number_field :id, disabled: true %>
     <%= form.text_field :name, placeholder: 'Text input', help: 'Enter your name' %>
     <%= form.email_field :email, placeholder: 'Email input' %>
     <%= form.password_field :password %>

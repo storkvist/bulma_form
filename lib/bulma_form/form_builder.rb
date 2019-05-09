@@ -8,6 +8,7 @@ module BulmaForm
 
     include BulmaForm::Inputs::Base
     include BulmaForm::Inputs::EmailField
+    include BulmaForm::Inputs::NumberField
     include BulmaForm::Inputs::PasswordField
     include BulmaForm::Inputs::Select
     include BulmaForm::Inputs::TextField

@@ -3,14 +3,14 @@ module BulmaForm
     module Base
       extend ActiveSupport::Concern
 
-      INPUT_ELEMENTS = %i[email_field password_field text_field].freeze
+      ELEMENTS_WITH_INPUT_CLASS = %i[email_field number_field password_field text_field].freeze
 
       class_methods do
         def bulma_field(field_name)
           define_method "#{field_name}_with_bulma" do |name, options = {}|
             form_field_builder(name, options) do
               classes = [options[:class]]
-              classes <<= 'input' if INPUT_ELEMENTS.include?(field_name)
+              classes <<= 'input' if ELEMENTS_WITH_INPUT_CLASS.include?(field_name)
               classes <<= 'is-danger' if error?(name)
               options[:class] = classes.compact.join(' ')
 

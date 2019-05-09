@@ -4,6 +4,7 @@ module BulmaForm
 
     autoload :Base
     autoload :EmailField
+    autoload :NumberField
     autoload :PasswordField
     autoload :Select
     autoload :TextField
